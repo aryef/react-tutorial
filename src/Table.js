@@ -37,8 +37,7 @@ const TableBody = (props1) => {
          )   
          return (
             <tbody>{rows}</tbody> 
-            )
-    
+            )    
   }
 }
 
