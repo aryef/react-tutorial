@@ -1,0 +1,45 @@
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2      
+wsl --set-version  Ubuntu-20.04 2
+wsl --list --verbose
+dotnet --info
+dotnet
+
+dotnet tool install dotnet-script -g
+
+https://github.com/microsoft/WSL/issues/4210
+
+https://www.brianketelsen.com/blog/ssh-to-wsl2/
+
+npm install rimraf
+
+https://codepen.io/topic/react/templates
+
+npm install -g serve
+
+npm install -g serve
+
+https://www.taniarascia.com/getting-started-with-react/
+
+https://www.w3schools.com/js/js_es6.asp
+https://reactjs.org/docs/introducing-jsx.html
+https://reacttraining.com/blog/jsx-the-confusing-parts/
+https://jscomplete.com/learn/javascript-for-react
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+serve -s build
+
+npm install --save-dev gh-pages
+
+ npm run build
+ 
+ npm run deploy
+ 
+ https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+ 
+ https://github.community/t/push-declined-due-to-email-privacy-restrictions/990/13
+
+https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages
+
+
