@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {MContext} from './MyProvider'
 
 const TableHeader = () => {
   return (
@@ -37,6 +38,19 @@ const TableBody = (props1) => {
                 <td>
                 <button onClick={()  => this.props.removeCharacter(index)}>Delete</button> 
                 </td>
+                <td>        
+                    <MContext.Consumer>
+                    {(context) => (
+                    <button onClick={()=>{
+                        
+                        const name = row.name
+
+                        return (context.setMessage(name))
+                        
+                        }}> Copy to form </button>
+                    )}
+                    </MContext.Consumer>
+                </td>
               </tr>
             )     
           }            
@@ -55,6 +69,7 @@ class Table extends Component {
         <table>
         <TableHeader />
         <TableBody1 characterData2 ={characterData11} removeCharacter={removeCharacter}  />
+        
       </table>
     )
   }

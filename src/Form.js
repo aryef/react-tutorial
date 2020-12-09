@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {MContext} from './MyProvider'
 
 class Form extends Component {
   initialState = {
@@ -46,7 +47,13 @@ class Form extends Component {
           value={job}         
           onChange={this.handleChange} />
          <input type="button" value="Submit" onClick={this.submitForm} />
-      </form>     
+      </form>  
+      <div>
+            <MContext.Consumer>
+             {(context) => (
+              <p>{context.state.message}</p>)}
+            </MContext.Consumer>
+         </div>   
       </div>
     );
   }

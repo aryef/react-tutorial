@@ -43,3 +43,4 @@ npm install --save-dev gh-pages
 https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages
 
 
+https://towardsdatascience.com/passing-data-between-react-components-parent-children-siblings-a64f89e24ecf

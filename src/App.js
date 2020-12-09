@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Table from './Table'
 import Form from './Form'
+import MyProvider from './MyProvider'
 
 export class App extends Component {    
         state = {
@@ -47,6 +48,7 @@ export class App extends Component {
           
             return (
               <div className="container">
+              <MyProvider>
               <h1>{message}</h1>
                 <Table characterData11={characters} 
                         removeCharacter={this.removeCharacter}                       
@@ -54,6 +56,7 @@ export class App extends Component {
                 <Form handleSubmit={this.handleSubmit}
                      parentCallback = {this.callbackFunction}
                 />
+                </MyProvider>
               </div>
             )
           }
