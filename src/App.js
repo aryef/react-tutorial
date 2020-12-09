@@ -4,7 +4,8 @@ import Form from './Form'
 
 export class App extends Component {    
         state = {
-         characters :  [
+        message:" initial message",
+        characters :  [
             {
               name: 'Charlie2',
               job: 'Janitor8',
@@ -24,8 +25,12 @@ export class App extends Component {
           ]
         };
 
+        callbackFunction = (childData) => {
+            this.setState({message: childData})
+        }
+
         removeCharacter = (index) => {
-            const {characters} = this.state
+            const characters = this.state.characters
           
             this.setState({
               characters: characters.filter((character, i) => {
@@ -37,12 +42,18 @@ export class App extends Component {
             this.setState({characters: [...this.state.characters, character]})
           }
         render() {
-            const { characters } = this.state
+            const  characters  = this.state.characters
+            const message = this.state.message
           
             return (
               <div className="container">
-                <Table characterData11={characters} removeCharacter={this.removeCharacter} />
-                <Form handleSubmit={this.handleSubmit}/>
+              <h1>{message}</h1>
+                <Table characterData11={characters} 
+                        removeCharacter={this.removeCharacter}                       
+                         />
+                <Form handleSubmit={this.handleSubmit}
+                     parentCallback = {this.callbackFunction}
+                />
               </div>
             )
           }

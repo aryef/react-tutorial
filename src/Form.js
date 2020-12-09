@@ -16,9 +16,14 @@ class Form extends Component {
     })
   }
 
+  sendData = () => {
+    this.props.parentCallback("Hey Popsie, How’s it going?");
+}
+
   submitForm = () => {
     this.props.handleSubmit(this.state)
     this.setState(this.initialState)
+    this.sendData()
   }
 
   render() {
